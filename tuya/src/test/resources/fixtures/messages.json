@@ -1,0 +1,89 @@
+[
+  {
+    "name": "3.3 DP_QUERY client->device",
+    "version": "3.3",
+    "seq": 1,
+    "cmd": 10,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"gwId\":\"fakedeviceid0000000000\",\"devId\":\"fakedeviceid0000000000\",\"uid\":\"fakedeviceid0000000000\",\"t\":\"1700000000\"}",
+    "bytes_hex": "000055aa000000010000000a000000888b700d8c9196b421b51e1420086889fd8ce64991e8272553097322a4f42130ced7c0851187b26fc0d5c2ec98d83a23f42f121c2194749e1c78f9699d38b15baa95a9b2ecd0586ab7ffec14f0e97e17b18ce64991e8272553097322a4f42130cef9645c25b6fa8a9bfbe41e4dd4d1f3300efea48a0091daa595a3a780fe13bd0e38c0c9bd0000aa55"
+  },
+  {
+    "name": "3.3 CONTROL client->device",
+    "version": "3.3",
+    "seq": 2,
+    "cmd": 7,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"devId\":\"fakedeviceid0000000000\",\"uid\":\"fakedeviceid0000000000\",\"t\":\"1700000000\",\"dps\":{\"201\":\"fake-ir-code-on\"}}",
+    "bytes_hex": "000055aa000000020000000700000097332e330000000000000000000000009d9209ffa05b6be941f6c977158dd98c2f121c2194749e1c78f9699d38b15baa95a9b2ecd0586ab7ffec14f0e97e17b18ce64991e8272553097322a4f42130cef9645c25b6fa8a9bfbe41e4dd4d1f330fa81a94cdee1520676b3b28b52da3d2acfb140a271dc73ade9b53c92b5c0188c64215f365b0dad6b2ac8fab15b1d40bdb3a3c39e0000aa55"
+  },
+  {
+    "name": "3.3 STATUS device->client",
+    "version": "3.3",
+    "seq": 3,
+    "cmd": 8,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"dps\":{\"201\":\"fake-ir-code-on\"},\"t\":1700000000}",
+    "bytes_hex": "000055aa00000003000000080000005b00000000332e33000000000000000000000000f63644c358b11cf1bdd46883c4c032ac2afaca5b281a999190b151373ba003bfdc16c12f0a2eea736800b405bea098bb377222e061a924c591cd9c27ea163ed48dfa5e1b0000aa55",
+    "retcode": 0
+  },
+  {
+    "name": "3.4 DP_QUERY_NEW client->device",
+    "version": "3.4",
+    "seq": 1,
+    "cmd": 16,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{}",
+    "bytes_hex": "000055aa000000010000001000000034cb70ddc25a2a2045b4c13084418a9abb8ea43373cd79023b497ede47d2a76f3a89ec7a25cbe935b55763f0d1a1a3b0bb0000aa55"
+  },
+  {
+    "name": "3.4 CONTROL_NEW client->device",
+    "version": "3.4",
+    "seq": 2,
+    "cmd": 13,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"protocol\":5,\"t\":1700000000,\"data\":{\"dps\":{\"201\":\"fake-ir-code-on\"}}}",
+    "bytes_hex": "000055aa000000020000000d000000844490b05d74be9368c24a038cbaeded8e89ea503e4be494dfe0c010bc6c463c75723ef6aca177a39b03b3e4fb00012c190193e62dd134ffd01e8187ea1bb31a808e7d4dd3343293d68940a123acbbc02885666a1b247e301f462da73617c25c29f8a7723b05e1614442c4cb1b5276902fefe78c9c5a4452795749d5ea2e7b0c020000aa55"
+  },
+  {
+    "name": "3.4 STATUS device->client",
+    "version": "3.4",
+    "seq": 3,
+    "cmd": 8,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"dps\":{\"201\":\"fake-ir-code-on\"},\"t\":1700000000}",
+    "bytes_hex": "000055aa000000030000000800000068000000004490b05d74be9368c24a038cbaeded8e046380dc3dcf7b46baf04883fc1195180be51d46d9eae462a8ad079ea5c3d4b469de3f0a80be6c0f06c736ea76216987b13f43d454581a812440f8fed4eb7dffc3cfea92ff3d5e9d2f3c3e37bedbe1580000aa55",
+    "retcode": 0
+  },
+  {
+    "name": "3.5 DP_QUERY_NEW client->device",
+    "version": "3.5",
+    "seq": 1,
+    "cmd": 16,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{}",
+    "bytes_hex": "00006699000000000001000000100000001e000102030405060708090a0b8642cb923f4c8a8cfd11f0db64e3112dcccf00009966",
+    "iv_hex": "000102030405060708090a0b"
+  },
+  {
+    "name": "3.5 CONTROL_NEW client->device",
+    "version": "3.5",
+    "seq": 2,
+    "cmd": 13,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"protocol\":5,\"t\":1700000000,\"data\":{\"dps\":{\"201\":\"fake-ir-code-on\"}}}",
+    "bytes_hex": "000066990000000000020000000d00000071101112131415161718191a1ba2e75a3804a786916a2b189c75e9b1d17e4680bf7d34b2b56659652eada8b569c7c28b16590daea6a37c7026bf2cc7eddb1d29af6a13eebe23d72975fd1483e917c8bcea50862e6cf9ef5abab8b16acc709d421ff1f64db36a8708fe281673aabf0fffbffb00009966",
+    "iv_hex": "101112131415161718191a1b"
+  },
+  {
+    "name": "3.5 STATUS device->client",
+    "version": "3.5",
+    "seq": 3,
+    "cmd": 8,
+    "key_hex": "30313233343536373839616263646566",
+    "payload_utf8": "{\"dps\":{\"201\":\"fake-ir-code-on\"},\"t\":1700000000}",
+    "bytes_hex": "00006699000000000003000000080000005f202122232425262728292a2be41feb19c2dc798cf9a810477189e512599e9b6786bca04c3553a84d66c0b36e86e23c39f1f5c7175d669c1780556efd0536ae037b83246e81a6629a738495d47a9e3168749bc6157f4e19f169cc9e3ee193e500009966",
+    "retcode": 0,
+    "iv_hex": "202122232425262728292a2b"
+  }
+]
