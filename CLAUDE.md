@@ -30,7 +30,8 @@ Read the latest spec before touching code.
 - Branch names: `<type>/<issue-number>-<short-kebab-desc>`, e.g. `feat/12-device-switches`.
 - Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `ci`, `build`, `perf`.
 - Commits follow Conventional Commits: `feat(remote): add projector d-pad`.
-- Small PRs, one concern each. Squash-merge into `main`.
+- Small PRs, one concern each. Squash-merge into `main`. Claude may merge its own PRs once checks pass.
+- No `Co-Authored-By` or "Generated with Claude Code" lines in commits or PRs.
 - PRs need: summary, linked issue, how it was tested.
 - The repo is PUBLIC: never commit secrets (Tuya local keys, device IDs, API keys,
   `local.properties`, keystores). Use git-ignored config.
