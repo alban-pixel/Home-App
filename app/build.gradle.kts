@@ -46,6 +46,10 @@ kotlin {
     jvmToolchain(17)
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
     implementation(project(":tuya"))
 
@@ -61,9 +65,10 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
-    // Declared so later tasks share one version; not used yet.
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    // Declared so later tasks share one version; not used yet.
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.tink.android)
     implementation(libs.kotlinx.coroutines.android)
