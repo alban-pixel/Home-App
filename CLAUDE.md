@@ -37,4 +37,26 @@ Read the latest spec before touching code.
   `local.properties`, keystores). Use git-ignored config.
 
 ## Build & test
-_To be filled once the project is scaffolded (Gradle commands, emulator/device steps)._
+Modules: `:tuya` (pure Kotlin/JVM library, no Android dependency, JUnit 5) and `:app` (Android,
+Compose + Material 3 + Hilt, Robolectric unit tests). Versions live in `gradle/libs.versions.toml`.
+
+Requirements: Android SDK with platform 37 (path in git-ignored `local.properties`: `sdk.dir=...`),
+JDK 17 toolchain (`jvmToolchain(17)`), Gradle launched with any JDK 17+ (e.g. Android Studio's JBR).
+
+```sh
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+./gradlew :tuya:test                 # library unit tests (JUnit 5)
+./gradlew :app:testDebugUnitTest     # app unit/UI tests (Robolectric + Compose UI test)
+./gradlew :app:assembleDebug         # debug APK -> app/build/outputs/apk/debug/
+./gradlew :tuya:test :app:testDebugUnitTest :app:assembleDebug lint   # full CI check
+./gradlew :app:installDebug          # install on a connected Pixel / emulator
+```
+
+Notes:
+- Gradle does not auto-detect Homebrew JDKs; if the JDK 17 toolchain is not found, add
+  `org.gradle.java.installations.paths=<jdk17 home>` to `~/.gradle/gradle.properties`.
+- Robolectric tests run on API 35 (`app/src/test/resources/robolectric.properties`): its API 36
+  sandbox needs Java 21 and there is no API 37 yet.
+- compileSdk/targetSdk are 37; Compose BOM is pinned to 2026.09.00 because 2026.11.01 needs
+  platform 37.1, which is not installed.
+- CI (`.github/workflows/ci.yml`) runs the full check on pushes to `main` and on pull requests.
